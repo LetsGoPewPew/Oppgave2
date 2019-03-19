@@ -34,6 +34,5 @@ namespace TDD.Tests
             string result = Program.ConvertNumberToCorrectString(input);
             Assert.AreEqual("HiOf", result);
         }
-
     }
 }
