@@ -30,10 +30,21 @@ namespace TDD
         }
         public static String ConvertNumberToCorrectString(int i)
         {
+            if(i % 3 == 0 && i % 5 == 0)
+            {
+                return "HiOf";
+            }
+
             if(i % 3 == 0)
             {
                 return "Hi";
             }
+
+            if(i % 5 == 0)
+            {
+                return "Of";
+            }
+
             return i.ToString();
         }
 

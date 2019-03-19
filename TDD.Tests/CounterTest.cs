@@ -18,5 +18,22 @@ namespace TDD.Tests
             string result = Program.ConvertNumberToCorrectString(input);
             Assert.AreEqual("Hi", result);
         }
+
+        [Test]
+        public void Divisable_by_five_returns_Of()
+        {
+            int input = 65;
+            string result = Program.ConvertNumberToCorrectString(input);
+            Assert.AreEqual("Of", result);
+        }
+
+        [Test]
+        public void Divisable_by_three_and_five_returns_HiOf()
+        {
+            int input = 60;
+            string result = Program.ConvertNumberToCorrectString(input);
+            Assert.AreEqual("HiOf", result);
+        }
+
     }
 }
