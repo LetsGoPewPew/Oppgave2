@@ -11,28 +11,31 @@ namespace TDD.Tests
     [TestFixture]
     public class CounterTest
     {
-        [Test]
-        public void Divisable_by_three_returns_Hi()
+        [TestCase(33, "Hi")]
+        [TestCase(66, "Hi")]
+        [TestCase(99, "Hi")]
+        public void Divisable_by_three_returns_Hi(int input, string expected)
         {
-            int input = 99;
             string result = Program.ConvertNumberToCorrectString(input);
-            Assert.AreEqual("Hi", result);
+            Assert.AreEqual(expected, result);
         }
 
-        [Test]
-        public void Divisable_by_five_returns_Of()
+        [TestCase(25, "Of")]
+        [TestCase(65, "Of")]
+        [TestCase(95, "Of")]
+        public void Divisable_by_five_returns_Of(int input, string expected)
         {
-            int input = 65;
             string result = Program.ConvertNumberToCorrectString(input);
-            Assert.AreEqual("Of", result);
+            Assert.AreEqual(expected, result);
         }
 
-        [Test]
-        public void Divisable_by_three_and_five_returns_HiOf()
+        [TestCase(30, "HiOf")]
+        [TestCase(60, "HiOf")]
+        [TestCase(90, "HiOf")]
+        public void Divisable_by_three_and_five_returns_HiOf(int input, string expected)
         {
-            int input = 60;
             string result = Program.ConvertNumberToCorrectString(input);
-            Assert.AreEqual("HiOf", result);
+            Assert.AreEqual(expected, result);
         }
     }
 }
