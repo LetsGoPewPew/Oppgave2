@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TDD.Exceptions;
 
 namespace TDD
 {
@@ -29,6 +30,11 @@ namespace TDD
 
         public static String ConvertNumberToCorrectString(int i)
         {
+            if(i <= 0)
+            {
+                throw new TooNegativeException("Value must be above 0");
+            }
+
             if(i % 3 == 0 && i % 5 == 0)
             {
                 return "HiOf";

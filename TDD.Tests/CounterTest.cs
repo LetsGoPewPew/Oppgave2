@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
 using TDD;
+using TDD.Exceptions;
 
 namespace TDD.Tests
 {
@@ -14,6 +15,7 @@ namespace TDD.Tests
         private static int[] divisableByThreeTestSource = { 33, 66, 99 };
         private static int[] divisableByFiveTestSource = { 25, 65, 95 };
         private static int[] divisableByThreeAndFiveTestSource = { 30, 60, 90 };
+        private static int[] belowOneThrowsExeptionTestSource = { 0, -5, -10 };
 
         [Test]
         [TestCaseSource("divisableByThreeTestSource")]
@@ -38,5 +40,15 @@ namespace TDD.Tests
             string result = Program.ConvertNumberToCorrectString(input);
             Assert.AreEqual("HiOf", result);
         }
+
+        [Test]
+        [TestCaseSource("belowOneThrowsExeptionTestSource")]
+        public void Below_one_throws_TooNegativeException(int input)
+        {
+            Assert.Throws<TooNegativeException>(
+                () => Program.ConvertNumberToCorrectString(input)
+                );
+        }
+
     }
 }

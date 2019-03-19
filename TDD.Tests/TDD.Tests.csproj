@@ -54,6 +54,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\TDD.Exceptions\TDD.Exceptions.csproj">
+      <Project>{B1930A71-10AC-4136-B374-476CDC0A77A1}</Project>
+      <Name>TDD.Exceptions</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TDD\TDD.csproj">
       <Project>{be1a371f-0e99-4994-b4a4-b7c02e211a19}</Project>
       <Name>TDD</Name>
