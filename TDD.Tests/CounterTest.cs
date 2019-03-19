@@ -16,7 +16,7 @@ namespace TDD.Tests
         {
             int input = 1;
             Program.ConvertNumberToCorrectString(input);
-            Assert.AreEqual(2, input);
+            Assert.AreEqual(1, input);
         }
     }
 }
