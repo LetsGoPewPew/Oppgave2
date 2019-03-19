@@ -21,6 +21,7 @@ namespace TDD
             
 
         }
+
         public static void Counter(int start, int end, StringBuilder stringBuilder)
         {
             for (int i = start; i <= end; i++)
@@ -28,6 +29,7 @@ namespace TDD
                 stringBuilder.AppendLine(ConvertNumberToCorrectString(i));
             }
         }
+
         public static String ConvertNumberToCorrectString(int i)
         {
             if(i % 3 == 0 && i % 5 == 0)
