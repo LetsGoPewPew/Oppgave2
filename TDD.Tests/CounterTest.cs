@@ -12,11 +12,11 @@ namespace TDD.Tests
     public class CounterTest
     {
         [Test]
-        public void Same_output_as_input()
+        public void Divisable_by_three_returns_Hi()
         {
-            int input = 1;
-            Program.ConvertNumberToCorrectString(input);
-            Assert.AreEqual(1, input);
+            int input = 99;
+            string result = Program.ConvertNumberToCorrectString(input);
+            Assert.AreEqual("Hi", result);
         }
     }
 }
