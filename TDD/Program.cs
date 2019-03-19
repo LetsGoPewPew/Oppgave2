@@ -14,12 +14,9 @@ namespace TDD
 
         static void Main(string[] args)
         {
-
             Counter(start, end, stringBuilder);
             Console.Write(stringBuilder);
             Console.ReadLine();
-            
-
         }
 
         public static void Counter(int start, int end, StringBuilder stringBuilder)
@@ -49,6 +46,5 @@ namespace TDD
 
             return i.ToString();
         }
-
     }
 }
